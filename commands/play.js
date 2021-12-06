@@ -172,6 +172,7 @@ module.exports = {
             try {
               let results = await api.search(search, "song");
               if (!results.content.length) {
+                //change this to normal reply
                 message.reply(search + " not found.").catch(console.error);
               }
               songurl = 'https://www.youtube.com/watch?v=' + results.content[0].videoId;
